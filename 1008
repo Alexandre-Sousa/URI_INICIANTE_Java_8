@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main {
+	public static void main (String[] args) {
+		Scanner type = new Scanner (System.in);
+		int num = type.nextInt();
+		int horas = type.nextInt();
+		double salario = type.nextDouble();
+		double salariof = (horas * salario);
+		System.out.println("NUMBER = " + num);
+		System.out.format("SALARY = U$ %.2f%n", salariof);
+		type.close();
+	}
+}

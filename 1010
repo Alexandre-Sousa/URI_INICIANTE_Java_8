@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		int partcod1 = type.nextInt();
+		int partquant1 = type.nextInt();
+		float partprc1 = type.nextFloat();
+		
+		int partcod2 = type.nextInt();
+		int partquant2 = type.nextInt();
+		float partprc2 = type.nextFloat();
+		
+		float total = (partquant1 * partprc1) + (partquant2 * partprc2);
+		
+		System.out.format("VALOR A PAGAR: R$ %.2f%n", total);
+		
+	}
+}

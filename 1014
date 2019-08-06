@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int total_distance = type.nextInt();
+		double gas_consume = type.nextDouble();
+		
+		double med_consume = total_distance / gas_consume;
+		
+		System.out.format("%.3f km/l%n", med_consume);
+		
+		type.close();
+		
+	}
+	
+}

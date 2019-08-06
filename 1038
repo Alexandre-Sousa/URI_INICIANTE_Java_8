@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int cod, quant;
+		float val;
+		
+		cod = type.nextInt();
+		quant = type.nextInt();
+		
+		if (cod == 1) {
+			val = quant * 4.00f;
+			System.out.format("Total: R$ %.2f%n", val);
+		} else if (cod == 2) {
+			val = quant * 4.50f;
+			System.out.format("Total: R$ %.2f%n", val);
+		} else if (cod == 3) {
+			val = quant * 5.00f;
+			System.out.format("Total: R$ %.2f%n", val);
+		} else if (cod == 4) {
+			val = quant * 2.00f;
+			System.out.format("Total: R$ %.2f%n", val);
+		} else if (cod == 5) {
+			val = quant * 1.50f;
+			System.out.format("Total: R$ %.2f%n", val);
+		}
+		
+		type.close();
+		
+	}
+	
+}

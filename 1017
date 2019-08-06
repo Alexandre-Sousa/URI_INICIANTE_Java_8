@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int time = type.nextInt();
+		int mv = type.nextInt();
+		
+		double distance = time * mv;
+		
+		double cons = distance / 12;
+		
+		System.out.format("%.3f%n", cons);
+		
+		type.close();
+		
+	}
+	
+}

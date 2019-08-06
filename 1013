@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int first = type.nextInt();
+		int second = type.nextInt();
+		int third = type.nextInt();
+		
+		int max = 0;
+		
+		if (first > max) {
+			max = first;				
+		} 
+		if (second > max) {
+			max = second;
+		} 
+		if (third > max) {
+			max = third;
+		}
+		
+		System.out.println(max + " eh o maior");
+		
+		type.close();
+	}
+	
+}

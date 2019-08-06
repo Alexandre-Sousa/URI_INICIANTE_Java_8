@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int ofirst, osecond, othird, cfirst, csecond, cthird, auxilliary;
+		
+		ofirst = type.nextInt();
+		osecond = type.nextInt();
+		othird = type.nextInt();
+		
+		cfirst = ofirst;
+		csecond = osecond;
+		cthird = othird;
+		
+		if (cfirst > csecond) {
+			auxilliary = cfirst;
+			cfirst = csecond;
+			csecond = auxilliary;
+		}
+		if (cfirst > cthird) {
+			auxilliary = cfirst;
+			cfirst = cthird;
+			cthird = auxilliary;
+		}
+		if (csecond > cthird) {
+			auxilliary = csecond;
+			csecond = cthird;
+			cthird = auxilliary;
+		}
+		
+		System.out.println(cfirst);
+		System.out.println(csecond);
+		System.out.println(cthird);
+		System.out.println();
+		System.out.println(ofirst);
+		System.out.println(osecond);
+		System.out.println(othird);
+		
+		type.close();
+		
+	}
+	
+}

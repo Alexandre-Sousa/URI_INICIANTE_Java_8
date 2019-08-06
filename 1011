@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		double radius = type.nextDouble();
+		double esphere_area = ((4.00 / 3.00) * 3.14159 * Math.pow(radius, 3));
+		
+		System.out.format("VOLUME = %.3f%n", esphere_area);
+		
+		type.close();
+		
+	}
+	
+}

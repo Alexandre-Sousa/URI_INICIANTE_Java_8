@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner(System.in);
+		int value, cont = 0;
+		
+		value = type.nextInt();
+		
+		while (cont < 6) {
+			if (value % 2 != 0) {
+				System.out.println(value);
+				cont++;
+			}
+			value++;
+		}
+		
+		type.close();
+		
+	}
+}

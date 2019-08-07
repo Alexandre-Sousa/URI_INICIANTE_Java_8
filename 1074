@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		int quantity, value, i;
+		
+		quantity = type.nextInt();
+		
+		for (i = 0; i < quantity; i++) {
+			value = type.nextInt();
+			if (value == 0) {
+				System.out.println("NULL");
+			} else if (value % 2 != 0) {
+				if (value < 0) {
+					System.out.println("ODD NEGATIVE");
+				} else {
+					System.out.println("ODD POSITIVE");
+				}
+			} else if (value % 2 == 0) {
+				if (value < 0) {
+					System.out.println("EVEN NEGATIVE");
+				} else {
+					System.out.println("EVEN POSITIVE");
+				}
+			}
+		}
+		
+		type.close();	
+    
+	}
+}

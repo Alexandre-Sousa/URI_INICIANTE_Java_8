@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		float A, B, C, auxilliary;
+		
+		A = type.nextFloat();
+		B = type.nextFloat();
+		C = type.nextFloat();
+		
+		if (A < B) {
+			auxilliary = A;
+			A = B;
+			B = auxilliary;
+		}
+		if (A < C) {
+			auxilliary = A;
+			A = C;
+			C = auxilliary;
+		}
+		if (B < C) {
+			auxilliary = B;
+			B = C;
+			C = auxilliary;
+		}
+		
+		if (A >= (B + C)) {
+			System.out.println("NAO FORMA TRIANGULO");
+		} else {
+			if (Math.pow(A, 2) == (Math.pow(B, 2) + Math.pow(C, 2))) {
+				System.out.println("TRIANGULO RETANGULO");
+			}
+			if (Math.pow(A, 2) > (Math.pow(B, 2) + Math.pow(C, 2))) {
+				System.out.println("TRIANGULO OBTUSANGULO");
+			}
+			if (Math.pow(A, 2) < (Math.pow(B, 2) + Math.pow(C, 2))) {
+				System.out.println("TRIANGULO ACUTANGULO");
+			}
+			if (A == B && B == C) {
+				System.out.println("TRIANGULO EQUILATERO");
+			} else if (A == B || A == C || B == C) {
+				System.out.println("TRIANGULO ISOSCELES");
+			}
+		}
+		
+		type.close();
+		
+	}
+
+}

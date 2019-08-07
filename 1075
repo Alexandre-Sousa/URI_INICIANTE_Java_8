@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		int value, i;
+		
+		value = type.nextInt();
+		
+		for (i = 2; i < 10000; i++) {
+			if (i % value == 2) {
+				System.out.println(i);
+			}
+		}		
+		
+		type.close();		
+    
+	}
+}

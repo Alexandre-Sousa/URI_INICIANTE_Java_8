@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int start, end, delta;
+		
+		start = type.nextInt();
+		end = type.nextInt();
+		
+		if (start < end) {
+			delta = end - start;
+			System.out.println("O JOGO DUROU " + delta + " HORA(S)");
+		} else if (start > end) {
+			delta = 24 - start + end;
+			System.out.println("O JOGO DUROU " + delta + " HORA(S)");
+		} else {
+			System.out.println("O JOGO DUROU 24 HORA(S)");
+		}
+		
+		type.close();
+		
+	}
+
+}

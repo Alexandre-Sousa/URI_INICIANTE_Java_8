@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		float salary, salary_readj, new_salary, dec_tax;
+		int perc_tax;
+		
+		salary = type.nextFloat();
+		
+		if (salary >= 0 && salary <= 400.00) {
+			dec_tax = 0.15f;
+			perc_tax = 15;
+			salary_readj = salary * dec_tax;
+		} else if (salary >= 400.01 && salary <= 800.00) {
+			dec_tax = 0.12f;
+			perc_tax = 12;
+			salary_readj = salary * dec_tax;
+		} else if (salary >= 800.01 && salary <= 1200.00) {
+			dec_tax = 0.10f;
+			perc_tax = 10;
+			salary_readj = salary * dec_tax;
+		} else if (salary >= 1200.01 && salary <= 2000.00) {
+			dec_tax = 0.07f;
+			perc_tax = 7;
+			salary_readj = salary * dec_tax;
+		} else {
+			dec_tax = 0.04f;
+			perc_tax = 4;
+			salary_readj = salary * dec_tax;
+		}
+		
+		new_salary = salary + salary_readj;
+		
+		System.out.format("Novo salario: %.2f%n", new_salary);
+		System.out.format("Reajuste ganho: %.2f%n", salary_readj);
+		System.out.println("Em percentual: " + perc_tax + " %");
+		
+		type.close();
+		
+	}
+	
+}

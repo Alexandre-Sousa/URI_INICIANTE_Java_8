@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		float value;
+		int cont = 0;
+		
+		for (int i = 1; i <= 6; i++ ) {
+			value = type.nextFloat();
+			if (value > 0) {
+				cont++;
+			}
+		}
+		
+		System.out.println(cont + " valores positivos");
+		
+		type.close();
+		
+	}
+	
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		float first_v, second_v, third_v;
+		
+		first_v = type.nextFloat();
+		second_v = type.nextFloat();
+		third_v = type.nextFloat();
+		
+		if ((first_v >= (second_v + third_v)) || (second_v >= (first_v + third_v)) || (third_v >= (first_v + second_v))) {
+			float area = ((first_v + second_v) * third_v) / 2;
+			System.out.format("Area = %.1f%n", area);
+		} else {
+			float per = first_v + second_v + third_v;
+			System.out.format("Perimetro = %.1f%n", per);
+		}
+		
+		type.close();
+		
+	}
+	
+}

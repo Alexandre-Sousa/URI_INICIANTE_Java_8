@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int st_ho, st_mi, ed_ho, ed_mi, start_time, end_time, game_time, hours, minutes;
+		
+		st_ho = type.nextInt();
+		st_mi = type.nextInt();
+		ed_ho = type.nextInt();
+		ed_mi = type.nextInt();
+		
+		st_ho = st_ho * 60;
+		ed_ho = ed_ho * 60;
+		
+		start_time = st_ho + st_mi;
+		end_time = ed_ho + ed_mi;
+		
+		if (end_time - start_time == 0) {
+			System.out.println("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
+		} else if (end_time - start_time > 0) {
+			game_time = end_time - start_time;
+			hours = game_time / 60;
+			minutes = game_time - (hours * 60);
+			System.out.println("O JOGO DUROU " + hours + " HORA(S) E " + minutes + " MINUTO(S)");
+		} else if(end_time - start_time < 0) {
+			game_time = (24 * 60) + (end_time - start_time); // Soma-se, pois o delta (end_time - start_time) é negativo.
+			hours = game_time / 60;
+			minutes = game_time - (hours * 60);
+			System.out.println("O JOGO DUROU " + hours + " HORA(S) E " + minutes + " MINUTO(S)");
+		}
+		
+		type.close();
+		
+	}
+}

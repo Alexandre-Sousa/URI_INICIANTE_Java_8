@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		float salary, tax;
+		
+		salary = type.nextFloat();
+		
+		if (salary >= 0.00 && salary <= 2000.00) {
+			System.out.println("Isento");
+		} else if (salary >= 2000.01 && salary <= 3000.00) {
+			tax = (salary - 2000.00f) * 0.08f;
+			System.out.format("R$ %.2f%n", tax);
+		} else if (salary >= 3000.01 && salary <= 4500.00) {
+			tax = (1000.00f * 0.08f) + ((salary - 3000.00f) * 0.18f);
+			System.out.format("R$ %.2f%n", tax);
+		} else if (salary > 4500.00) {
+			tax = (1000.00f * 0.08f) + (1500.00f * 0.18f) + ((salary - 4500.00f) * 0.28f);
+			System.out.format("R$ %.2f%n", tax);
+		}
+		
+		type.close();
+		
+	}
+	
+}

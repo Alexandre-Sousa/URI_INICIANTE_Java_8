@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+	public class Main {
+		public static void main (String[] args) {
+			
+			Scanner type = new Scanner (System.in);
+			
+			String first_word, second_word, third_word;
+			
+			first_word = type.nextLine();
+			second_word = type.nextLine();
+			third_word = type.nextLine();
+			
+			if (first_word.equals("vertebrado")) {
+				if (second_word.equals("ave")) {
+					if (third_word.equals("carnivoro")) {
+						System.out.println("aguia");
+					} else if (third_word.equals("onivoro")) {
+						System.out.println("pomba");
+					}
+				} else if (second_word.equals("mamifero")) {
+					if (third_word.equals("onivoro")) {
+						System.out.println("homem");
+					} else if (third_word.equals("herbivoro")) {
+						System.out.println("vaca");
+					}
+				}
+			} else if (first_word.equals("invertebrado")) {
+				if (second_word.equals("inseto")) {
+					if (third_word.equals("hematofago")) {
+						System.out.println("pulga");
+					} else if (third_word.equals("herbivoro")) {
+						System.out.println("lagarta");
+					}
+				} else if (second_word.equals("anelideo")) {
+					if (third_word.equals("hematofago")) {
+						System.out.println("sanguessuga");
+					} else if (third_word.equals("onivoro")) {
+						System.out.println("minhoca");
+					}
+				}
+			}
+			
+			type.close();
+			
+		}
+	
+	}

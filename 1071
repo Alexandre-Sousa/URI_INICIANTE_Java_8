@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int X, Y, auxilliary, i, sum = 0;
+		
+		X = type.nextInt();
+		Y = type.nextInt();
+		
+		if (X > Y) {
+			auxilliary = X;
+			X = Y;
+			Y = auxilliary;
+		}
+		
+		for (i = X + 1; i < Y; i++) {
+			if (i % 2 != 0) {
+				sum = sum + i;
+			}
+		}
+		
+		System.out.println(sum);
+		
+		type.close();
+		
+	}
+}

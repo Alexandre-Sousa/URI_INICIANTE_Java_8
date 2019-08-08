@@ -1,0 +1,15 @@
+public class Main {
+	public static void main(String[] args) {
+		
+		int I, J = 7, S;
+		
+		for (I = 1; I <= 9; I = I + 2){
+			for (S = 0; S < 3; S++ ) {
+				System.out.println("I=" + I + " " + "J=" + J);
+				J--;
+			}
+			J = J + 5;
+		}
+		
+	}
+}

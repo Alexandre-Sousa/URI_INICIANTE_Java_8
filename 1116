@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		float firstNumber, secondNumber, quotient;
+		int caseNumbers, i;
+		
+		caseNumbers = input.nextInt();
+		
+		for (i = 0; i < caseNumbers; i++) {
+			firstNumber = input.nextInt();
+			secondNumber = input.nextInt();
+			
+			if (secondNumber == 0) {
+				System.out.println("divisao impossivel");
+			} else {
+				quotient = firstNumber / secondNumber;
+				
+				System.out.printf("%.1f%n", quotient);
+			}
+			
+		}
+		
+		input.close();
+		
+	}
+}

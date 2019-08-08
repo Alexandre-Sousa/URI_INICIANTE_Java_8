@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		int x, y, i, auxilliary;
+		
+		x = input.nextInt();
+		y = input.nextInt();
+		
+		if (x > y) {
+			auxilliary = x;
+			x = y;
+			y = auxilliary;
+		}
+		
+		for (i = x + 1; i < y; i++) {
+			if (i % 5 == 2 || i % 5 == 3) {
+				System.out.printf("%d%n", i);
+			}
+		}
+		
+		input.close();
+		
+	}
+}

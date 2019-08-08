@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int number, i;
+		float first, second, third, med_p;
+		
+		number = type.nextInt();
+		
+		for (i = 0; i < number; i++) {
+			first = type.nextFloat();
+			second = type.nextFloat();
+			third = type.nextFloat();
+			
+			med_p = ((first * 2) + (second * 3) + (third * 5)) / 10;
+			
+			System.out.format("%.1f%n", med_p);
+		}
+		
+		type.close();
+		
+	}
+}

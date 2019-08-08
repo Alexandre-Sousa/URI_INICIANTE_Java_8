@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		String stringToExclude, colon;
+		int beginHour, beginMinute, beginSecond, endHour, endMinute, endSecond, beginDay,
+		endDay, begin, end, day, hour, minute, second, auxilliary, delta;
+		
+		stringToExclude = input.next();
+		beginDay = input.nextInt();
+		beginHour = input.nextInt();
+		colon = input.next();
+		beginMinute = input.nextInt();
+		colon = input.next();
+		beginSecond = input.nextInt();
+		
+		stringToExclude = input.next();
+		endDay = input.nextInt();
+		endHour = input.nextInt();
+		colon = input.next();
+		endMinute = input.nextInt();
+		colon = input.next();
+		endSecond = input.nextInt();
+		
+		beginDay = beginDay * 86400;
+		beginHour = beginHour * 3600;
+		beginMinute = beginMinute * 60;
+		
+		endDay = endDay * 86400;
+		endHour = endHour * 3600;
+		endMinute = endMinute * 60;
+		
+		begin = beginDay + beginHour + beginMinute + beginSecond;
+		end = endDay + endHour + endMinute + endSecond;
+		
+		if (begin > end) {
+			auxilliary = begin;
+			begin = end;
+			end = auxilliary;
+			
+			delta = 2592000 - (end - begin);
+		} else {
+			delta = end - begin;
+		}
+		
+		day = delta / 86400;
+		auxilliary = delta - (day * 86400);
+		hour = auxilliary / 3600;
+		auxilliary = auxilliary - (3600 * hour);
+		minute = auxilliary / 60;
+		auxilliary = auxilliary - (minute * 60);
+		second = auxilliary;
+
+		System.out.println(day + " dia(s)");
+		System.out.println(hour + " hora(s)");
+		System.out.println(minute + " minuto(s)");
+		System.out.println(second + " segundo(s)");
+		
+		input.close();
+		
+	}
+}

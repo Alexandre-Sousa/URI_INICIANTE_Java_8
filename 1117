@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		float firstGrade, secondGrade, average;
+		
+		firstGrade = input.nextFloat();
+		while (firstGrade < 0 || firstGrade > 10) {
+			System.out.println("nota invalida");
+			firstGrade = input.nextFloat();
+		}
+		
+		secondGrade = input.nextFloat();
+		while(secondGrade < 0 || secondGrade > 10) {
+			System.out.println("nota invalida");
+			secondGrade = input.nextFloat();
+		}
+		
+		average = (firstGrade + secondGrade) / 2;
+		
+		System.out.printf("media = %.2f%n", average);
+		
+		input.close();
+		
+	}
+}

@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		float firstGrade, secondGrade, average;
+		int decision;
+		
+		do {
+			firstGrade = input.nextFloat();
+			while (firstGrade < 0 || firstGrade > 10) {
+				System.out.println("nota invalida");
+				firstGrade = input.nextFloat();
+			}
+		
+			secondGrade = input.nextFloat();
+			while (secondGrade < 0 || secondGrade > 10) {
+				System.out.println("nota invalida");
+				secondGrade = input.nextFloat();
+			}
+		
+			average = (firstGrade + secondGrade) / 2;
+		
+			System.out.printf("media = %.2f%n", average);
+		
+			System.out.println("novo calculo (1-sim 2-nao)");
+			decision = input.nextInt();
+			while (decision != 1 && decision != 2) {
+				System.out.println("novo calculo (1-sim 2-nao)");
+				decision = input.nextInt();
+			}
+		} while (decision != 2);
+		
+		input.close();
+		
+	}
+}

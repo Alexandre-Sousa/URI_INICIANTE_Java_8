@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args) {
+		
+		Scanner type = new Scanner (System.in);
+		
+		int i, value, bigger = 0, pos = 0;
+		
+		for (i = 1; i <= 100; i++) {
+			value = type.nextInt();
+			if (value > bigger) {
+				bigger = value;
+				pos = i;
+			}
+		}
+		
+		System.out.println(bigger);
+		System.out.println(pos);
+		
+		type.close();
+		
+	}
+}

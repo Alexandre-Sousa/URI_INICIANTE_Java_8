@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		int inter = 0, gremio = 0, draw = 0, grenal = 0, flag = 1, interGoals, gremioGoals;
+		
+		while (flag == 1) {
+
+			interGoals = input.nextInt();
+			gremioGoals = input.nextInt();
+			
+			if (interGoals == gremioGoals) {
+				draw++;
+			} else if (interGoals > gremioGoals) {
+				inter++;
+			} else if (gremioGoals > interGoals) {
+				gremio++;
+			}
+			
+			grenal++;
+			
+			System.out.println("Novo grenal (1-sim 2-nao)");
+			flag = input.nextInt();
+			
+		}
+		
+		System.out.printf("%d grenais%n", grenal);
+		System.out.printf("Inter:%d%n", inter);
+		System.out.printf("Gremio:%d%n", gremio);
+		System.out.printf("Empates:%d%n", draw);
+		if (inter > gremio) {
+			System.out.println("Inter venceu mais");
+		} else if (gremio > inter) {
+			System.out.println("Gremio venceu mais");
+		}
+		
+		input.close();
+		
+	}
+}

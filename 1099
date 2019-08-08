@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner (System.in);
+		
+		int quantity, i, j, first, second, auxilliary, sum;
+		
+		quantity = input.nextInt();
+		
+		for (i = 0; i < quantity; i++) {
+			
+			sum = 0;
+			
+			first = input.nextInt();
+			second = input.nextInt();
+			
+			if (first > second) {
+				auxilliary = first;
+				first = second;
+				second = auxilliary;
+			}
+			
+			for (j = first + 1; j < second; j++) {
+				if (j % 2 != 0) {
+					sum = sum + j;
+				}
+			}
+			
+			System.out.println(sum);
+			
+		}
+		
+		input.close();
+		
+	}
+}
